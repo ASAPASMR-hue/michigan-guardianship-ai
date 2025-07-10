@@ -1,0 +1,301 @@
+question_id,question,complexity_tier,question_type,source_seed,is_out_of_scope,expected_elements
+GAP111,What is the filing fee for guardianship petition in Genesee County?,simple,deadlines,enhanced_template,False,specific_answer;genesee_county_detail
+GAP112,How much does it cost to file for court filing?,simple,deadlines,enhanced_template,False,specific_answer;genesee_county_detail
+GAP113,Is there a fee waiver available for modification petition?,simple,forms,enhanced_template,False,specific_answer;genesee_county_detail
+GAP114,What's the cost for court filing forms?,simple,deadlines,enhanced_template,False,specific_answer;genesee_county_detail
+GAP115,Do I need to pay for emergency?,simple,deadlines,enhanced_template,False,specific_answer;genesee_county_detail
+GAP116,What form do I need for termination?,simple,filing,enhanced_template,False,specific_answer;genesee_county_detail
+GAP117,Where can I get the full guardianship form?,simple,deadlines,enhanced_template,False,specific_answer;genesee_county_detail
+GAP118,Which PC form is for annual reporting?,simple,deadlines,enhanced_template,False,specific_answer;genesee_county_detail
+GAP119,Do I need form PC 651 or PC 650 for limited guardianship?,simple,forms,enhanced_template,False,specific_answer;genesee_county_detail
+GAP120,How many copies of the annual reporting form do I need?,simple,filing,enhanced_template,False,specific_answer;genesee_county_detail
+GAP121,Where do I file Wayne in Genesee County?,simple,deadlines,enhanced_template,False,specific_answer;genesee_county_detail
+GAP122,What's the address for filing permanent?,simple,forms,enhanced_template,False,specific_answer;genesee_county_detail
+GAP123,Which room is the limited office in?,simple,filing,enhanced_template,False,specific_answer;genesee_county_detail
+GAP124,Where is the Genesee County Probate Court for Macomb?,simple,deadlines,enhanced_template,False,specific_answer;genesee_county_detail
+GAP125,What floor is the voluntary department on?,simple,forms,enhanced_template,False,specific_answer;genesee_county_detail
+GAP126,When are full hearings held?,simple,forms,enhanced_template,False,specific_answer;genesee_county_detail
+GAP127,What day of the week are temporary hearings?,simple,forms,enhanced_template,False,specific_answer;genesee_county_detail
+GAP128,How long does emergency take?,simple,filing,enhanced_template,False,specific_answer;genesee_county_detail
+GAP129,What's the deadline for filing contested?,simple,filing,enhanced_template,False,specific_answer;genesee_county_detail
+GAP130,How many days before the hearing do I file temporary?,simple,deadlines,enhanced_template,False,specific_answer;genesee_county_detail
+GAP131,Who needs to be notified for contested?,simple,filing,enhanced_template,False,specific_answer;genesee_county_detail
+GAP132,What documents are needed for voluntary?,simple,filing,enhanced_template,False,specific_answer;genesee_county_detail
+GAP133,Do I need a lawyer for voluntary?,simple,filing,enhanced_template,False,specific_answer;genesee_county_detail
+GAP134,Can I file temporary online?,simple,forms,enhanced_template,False,specific_answer;genesee_county_detail
+GAP135,How do I submit permanent to the court?,simple,deadlines,enhanced_template,False,specific_answer;genesee_county_detail
+GAP136,What is the filing fee for guardian letters in Genesee County?,simple,filing,enhanced_template,False,specific_answer;genesee_county_detail
+GAP137,How much does it cost to file for annual report?,simple,forms,enhanced_template,False,specific_answer;genesee_county_detail
+GAP138,Is there a fee waiver available for annual report?,simple,deadlines,enhanced_template,False,specific_answer;genesee_county_detail
+GAP139,What's the cost for guardian letters forms?,simple,filing,enhanced_template,False,specific_answer;genesee_county_detail
+GAP140,Do I need to pay for temporary?,simple,deadlines,enhanced_template,False,specific_answer;genesee_county_detail
+GAP141,What form do I need for modification?,simple,forms,enhanced_template,False,specific_answer;genesee_county_detail
+GAP142,Where can I get the termination form?,simple,deadlines,enhanced_template,False,specific_answer;genesee_county_detail
+GAP143,Which PC form is for emergency guardianship?,simple,forms,enhanced_template,False,specific_answer;genesee_county_detail
+GAP144,Do I need form PC 651 or PC 650 for modification?,simple,deadlines,enhanced_template,False,specific_answer;genesee_county_detail
+GAP145,How many copies of the limited guardianship form do I need?,simple,forms,enhanced_template,False,specific_answer;genesee_county_detail
+GAP146,Where do I file Ohio in Genesee County?,simple,deadlines,enhanced_template,False,specific_answer;genesee_county_detail
+GAP147,What's the address for filing emergency?,simple,forms,enhanced_template,False,specific_answer;genesee_county_detail
+GAP148,Which room is the permanent office in?,simple,forms,enhanced_template,False,specific_answer;genesee_county_detail
+GAP149,Where is the Genesee County Probate Court for Kent?,simple,filing,enhanced_template,False,specific_answer;genesee_county_detail
+GAP150,What floor is the contested department on?,simple,filing,enhanced_template,False,specific_answer;genesee_county_detail
+GAP151,When are voluntary hearings held?,simple,deadlines,enhanced_template,False,specific_answer;genesee_county_detail
+GAP152,What day of the week are contested hearings?,simple,filing,enhanced_template,False,specific_answer;genesee_county_detail
+GAP153,How long does voluntary take?,simple,deadlines,enhanced_template,False,specific_answer;genesee_county_detail
+GAP154,What's the deadline for filing emergency?,simple,filing,enhanced_template,False,specific_answer;genesee_county_detail
+GAP155,How many days before the hearing do I file full?,simple,filing,enhanced_template,False,specific_answer;genesee_county_detail
+GAP156,Who needs to be notified for emergency?,simple,filing,enhanced_template,False,specific_answer;genesee_county_detail
+GAP157,What documents are needed for modified?,simple,forms,enhanced_template,False,specific_answer;genesee_county_detail
+GAP158,Do I need a lawyer for limited?,simple,filing,enhanced_template,False,specific_answer;genesee_county_detail
+GAP159,Can I file emergency online?,simple,filing,enhanced_template,False,specific_answer;genesee_county_detail
+GAP160,How do I submit modified to the court?,simple,deadlines,enhanced_template,False,specific_answer;genesee_county_detail
+GAP161,What is the filing fee for emergency filing in Genesee County?,simple,filing,enhanced_template,False,specific_answer;genesee_county_detail
+GAP162,How much does it cost to file for guardianship petition?,simple,filing,enhanced_template,False,specific_answer;genesee_county_detail
+GAP163,Is there a fee waiver available for court filing?,simple,forms,enhanced_template,False,specific_answer;genesee_county_detail
+GAP164,What's the cost for emergency filing forms?,simple,filing,enhanced_template,False,specific_answer;genesee_county_detail
+GAP165,Do I need to pay for permanent?,simple,filing,enhanced_template,False,specific_answer;genesee_county_detail
+GAP166,What form do I need for emergency guardianship?,simple,deadlines,enhanced_template,False,specific_answer;genesee_county_detail
+GAP167,Where can I get the annual reporting form?,simple,deadlines,enhanced_template,False,specific_answer;genesee_county_detail
+GAP168,Which PC form is for limited guardianship?,simple,deadlines,enhanced_template,False,specific_answer;genesee_county_detail
+GAP169,Do I need form PC 651 or PC 650 for emergency guardianship?,simple,deadlines,enhanced_template,False,specific_answer;genesee_county_detail
+GAP170,How many copies of the termination form do I need?,simple,forms,enhanced_template,False,specific_answer;genesee_county_detail
+GAP171,Where do I file Macomb in Genesee County?,simple,filing,enhanced_template,False,specific_answer;genesee_county_detail
+GAP172,What's the address for filing limited?,simple,forms,enhanced_template,False,specific_answer;genesee_county_detail
+GAP173,Which room is the emergency office in?,simple,filing,enhanced_template,False,specific_answer;genesee_county_detail
+GAP174,Where is the Genesee County Probate Court for Ohio?,simple,filing,enhanced_template,False,specific_answer;genesee_county_detail
+GAP175,What floor is the temporary department on?,simple,forms,enhanced_template,False,specific_answer;genesee_county_detail
+GAP176,When are temporary hearings held?,simple,forms,enhanced_template,False,specific_answer;genesee_county_detail
+GAP177,What day of the week are modified hearings?,simple,forms,enhanced_template,False,specific_answer;genesee_county_detail
+GAP178,How long does contested take?,simple,forms,enhanced_template,False,specific_answer;genesee_county_detail
+GAP179,What's the deadline for filing full?,simple,forms,enhanced_template,False,specific_answer;genesee_county_detail
+GAP180,How many days before the hearing do I file permanent?,simple,deadlines,enhanced_template,False,specific_answer;genesee_county_detail
+GAP181,Who needs to be notified for full?,simple,deadlines,enhanced_template,False,specific_answer;genesee_county_detail
+GAP182,What documents are needed for limited?,simple,forms,enhanced_template,False,specific_answer;genesee_county_detail
+GAP183,Do I need a lawyer for temporary?,simple,deadlines,enhanced_template,False,specific_answer;genesee_county_detail
+GAP184,Can I file permanent online?,simple,filing,enhanced_template,False,specific_answer;genesee_county_detail
+GAP185,How do I submit contested to the court?,simple,forms,enhanced_template,False,specific_answer;genesee_county_detail
+GAP186,What is the filing fee for annual report in Genesee County?,simple,deadlines,enhanced_template,False,specific_answer;genesee_county_detail
+GAP187,How much does it cost to file for guardian letters?,simple,deadlines,enhanced_template,False,specific_answer;genesee_county_detail
+GAP188,Is there a fee waiver available for guardianship petition?,simple,forms,enhanced_template,False,specific_answer;genesee_county_detail
+GAP189,What's the cost for guardianship petition forms?,simple,deadlines,enhanced_template,False,specific_answer;genesee_county_detail
+GAP190,Do I need to pay for contested?,simple,forms,enhanced_template,False,specific_answer;genesee_county_detail
+GAP191,What form do I need for limited guardianship?,simple,filing,enhanced_template,False,specific_answer;genesee_county_detail
+GAP192,My sibling wants to get guardianship of my child. What's the process?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP193,I'm a sibling seeking guardianship. What do I need to do?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP194,Can sibling get guardianship if both parents agree?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP195,What if my child's sibling wants to be the guardian?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP196,How does being a family friend affect my guardianship application?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP197,How can a parent terminate aunt guardianship?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP198,What's the process to end a stepparent guardianship?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP199,Can I modify a cousin guardianship arrangement?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP200,How do I change from godparent to full guardianship?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP201,What if the aunt guardian wants to stop?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP202,What happens if the sibling guardian needs to move?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP203,Can a aunt guardian relocate out of state?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP204,What if the uncle guardian can't continue?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP205,How do we add another person to sibling guardianship?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP206,Can cousin be co-guardians?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP207,What rights does a grandparent have as guardian?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP208,What are the requirements for sibling to be guardian?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP209,Do temporary need background checks?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP210,Can temporary make medical decisions?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP211,What responsibilities does a cousin guardian have?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP212,What if one parent objects to sibling guardianship?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP213,Can aunt get guardianship without parent consent?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP214,What if the child doesn't want sibling as guardian?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP215,How long does contested cousin guardianship take?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP216,What evidence is needed for family friend guardianship?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP217,My aunt wants to get guardianship of my child. What's the process?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP218,I'm a cousin seeking guardianship. What do I need to do?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP219,Can aunt get guardianship if both parents agree?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP220,What if my child's godparent wants to be the guardian?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP221,How does being a godparent affect my guardianship application?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP222,How can a parent terminate godparent guardianship?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP223,What's the process to end a sibling guardianship?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP224,Can I modify a aunt guardianship arrangement?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP225,How do I change from sibling to full guardianship?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP226,What if the cousin guardian wants to stop?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP227,What happens if the aunt guardian needs to move?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP228,Can a grandparent guardian relocate out of state?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP229,What if the family friend guardian can't continue?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP230,How do we add another person to stepparent guardianship?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP231,Can uncle be co-guardians?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP232,What rights does a uncle have as guardian?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP233,What are the requirements for godparent to be guardian?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP234,Do full need background checks?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP235,Can full make medical decisions?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP236,What responsibilities does a sibling guardian have?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP237,What if one parent objects to stepparent guardianship?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP238,Can family friend get guardianship without parent consent?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP239,What if the child doesn't want stepparent as guardian?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP240,How long does contested family friend guardianship take?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP241,What evidence is needed for cousin guardianship?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP242,My godparent wants to get guardianship of my child. What's the process?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP243,I'm a family friend seeking guardianship. What do I need to do?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP244,Can family friend get guardianship if both parents agree?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP245,What if my child's cousin wants to be the guardian?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP246,How does being a aunt affect my guardianship application?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP247,How can a parent terminate sibling guardianship?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP248,What's the process to end a godparent guardianship?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP249,Can I modify a uncle guardianship arrangement?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP250,How do I change from stepparent to full guardianship?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP251,What if the grandparent guardian wants to stop?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP252,What happens if the cousin guardian needs to move?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP253,Can a stepparent guardian relocate out of state?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP254,What if the stepparent guardian can't continue?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP255,How do we add another person to family friend guardianship?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP256,Can aunt be co-guardians?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP257,What rights does a godparent have as guardian?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP258,What are the requirements for grandparent to be guardian?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP259,Do emergency need background checks?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP260,Can permanent make medical decisions?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP261,What responsibilities does a godparent guardian have?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP262,What if one parent objects to aunt guardianship?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP263,Can godparent get guardianship without parent consent?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP264,What if the child doesn't want cousin as guardian?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP265,How long does contested sibling guardianship take?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP266,What evidence is needed for godparent guardianship?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP267,My family friend wants to get guardianship of my child. What's the process?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP268,I'm a grandparent seeking guardianship. What do I need to do?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP269,Can uncle get guardianship if both parents agree?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP270,What if my child's family friend wants to be the guardian?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP271,How does being a stepparent affect my guardianship application?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP272,How can a parent terminate grandparent guardianship?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP273,What's the process to end a family friend guardianship?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP274,Can I modify a grandparent guardianship arrangement?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP275,How do I change from grandparent to full guardianship?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP276,What if the godparent guardian wants to stop?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP277,What happens if the stepparent guardian needs to move?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP278,Can a uncle guardian relocate out of state?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP279,What if the grandparent guardian can't continue?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP280,How do we add another person to uncle guardianship?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP281,Can grandparent be co-guardians?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP282,What rights does a aunt have as guardian?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP283,What are the requirements for aunt to be guardian?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP284,Do modified need background checks?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP285,Can emergency make medical decisions?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP286,What responsibilities does a family friend guardian have?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP287,What if one parent objects to godparent guardianship?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP288,Can uncle get guardianship without parent consent?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP289,What if the child doesn't want family friend as guardian?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP290,How long does contested aunt guardianship take?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP291,What evidence is needed for stepparent guardianship?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP292,My uncle wants to get guardianship of my child. What's the process?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP293,I'm a aunt seeking guardianship. What do I need to do?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP294,Can godparent get guardianship if both parents agree?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP295,What if my child's grandparent wants to be the guardian?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP296,How does being a sibling affect my guardianship application?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP297,How can a parent terminate uncle guardianship?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP298,What's the process to end a cousin guardianship?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP299,Can I modify a godparent guardianship arrangement?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP300,How do I change from aunt to full guardianship?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP301,What if the family friend guardian wants to stop?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP302,What happens if the uncle guardian needs to move?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP303,Can a family friend guardian relocate out of state?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP304,What if the cousin guardian can't continue?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP305,How do we add another person to aunt guardianship?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP306,Can family friend be co-guardians?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP307,What rights does a stepparent have as guardian?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP308,What are the requirements for cousin to be guardian?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP309,Do permanent need background checks?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP310,Can limited make medical decisions?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP311,What responsibilities does a grandparent guardian have?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP312,What if one parent objects to cousin guardianship?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP313,Can sibling get guardianship without parent consent?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP314,What if the child doesn't want godparent as guardian?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP315,How long does contested grandparent guardianship take?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP316,What evidence is needed for grandparent guardianship?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP317,My stepparent wants to get guardianship of my child. What's the process?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP318,I'm a godparent seeking guardianship. What do I need to do?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP319,Can grandparent get guardianship if both parents agree?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP320,What if my child's aunt wants to be the guardian?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP321,How does being a cousin affect my guardianship application?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP322,How can a parent terminate cousin guardianship?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP323,What's the process to end a grandparent guardianship?,standard,modification,enhanced_template,False,process_steps;required_forms;timeline
+GAP324,Can I modify a stepparent guardianship arrangement?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP325,How do I change from uncle to full guardianship?,standard,full_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP326,What if the sibling guardian wants to stop?,standard,limited_guardianship,enhanced_template,False,process_steps;required_forms;timeline
+GAP327,My child is uncle and the other parent is aunt. How does this affect guardianship?,complex,special_circumstances,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP328,We have sibling involvement and need aunt guardianship. What's the process?,complex,special_circumstances,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP329,The child is cousin and we need emergency guardianship because family friend. What do we do?,complex,special_circumstances,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP330,How do we handle guardianship when godparent and sibling?,complex,emergency,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP331,What if permanent applies and there's also contested?,complex,interstate,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP332,URGENT: guardian died and we need immediate guardianship. What are our options?,complex,interstate,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP333,The aunt parent just aunt and the child needs care now. What should I do?,complex,emergency,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP334,Child's guardian family friend and we need emergency placement. How fast can we act?,complex,special_circumstances,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP335,Both parents are cousin and grandparent is involved. Who can get guardianship?,complex,special_circumstances,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP336,We have a sibling emergency and need guardianship within uncle. Is this possible?,complex,interstate,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP337,The child is uncle tribe member and aunt parent is contesting. How does ICWA apply?,complex,special_circumstances,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP338,Parent is aunt and CPS says we need stepparent. What's the guardianship process?,complex,special_circumstances,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP339,Child has aunt needs and current guardian cousin. Can we get emergency guardianship?,complex,emergency,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP340,We're dealing with grandparent and the cousin parent lives out of state. What are the rules?,complex,interstate,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP341,Judge ordered emergency but we also need temporary. How do we proceed?,complex,special_circumstances,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP342,My child is cousin and the other parent is godparent. How does this affect guardianship?,complex,interstate,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP343,We have cousin involvement and need grandparent guardianship. What's the process?,complex,interstate,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP344,The child is grandparent and we need emergency guardianship because cousin. What do we do?,complex,interstate,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP345,How do we handle guardianship when stepparent and stepparent?,complex,interstate,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP346,What if full applies and there's also permanent?,complex,interstate,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP347,URGENT: child abandoned and we need immediate guardianship. What are our options?,complex,interstate,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP348,The cousin parent just grandparent and the child needs care now. What should I do?,complex,emergency,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP349,Child's guardian uncle and we need emergency placement. How fast can we act?,complex,interstate,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP350,Both parents are aunt and uncle is involved. Who can get guardianship?,complex,emergency,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP351,We have a godparent emergency and need guardianship within godparent. Is this possible?,complex,interstate,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP352,The child is stepparent tribe member and stepparent parent is contesting. How does ICWA apply?,complex,special_circumstances,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP353,Parent is uncle and CPS says we need uncle. What's the guardianship process?,complex,special_circumstances,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP354,Child has stepparent needs and current guardian sibling. Can we get emergency guardianship?,complex,special_circumstances,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP355,We're dealing with grandparent and the stepparent parent lives out of state. What are the rules?,complex,emergency,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP356,Judge ordered limited but we also need permanent. How do we proceed?,complex,interstate,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP357,My child is family friend and the other parent is godparent. How does this affect guardianship?,complex,interstate,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP358,We have sibling involvement and need family friend guardianship. What's the process?,complex,special_circumstances,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP359,The child is cousin and we need emergency guardianship because cousin. What do we do?,complex,emergency,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP360,How do we handle guardianship when godparent and godparent?,complex,special_circumstances,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP361,What if modified applies and there's also modified?,complex,special_circumstances,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP362,URGENT: guardian died and we need immediate guardianship. What are our options? [Case 9974],complex,interstate,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP363,The aunt parent just godparent and the child needs care now. What should I do?,complex,interstate,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP364,Child's guardian stepparent and we need emergency placement. How fast can we act?,complex,special_circumstances,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP365,Both parents are stepparent and cousin is involved. Who can get guardianship?,complex,emergency,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP366,We have a family friend emergency and need guardianship within cousin. Is this possible?,complex,interstate,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP367,The child is sibling tribe member and grandparent parent is contesting. How does ICWA apply?,complex,emergency,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP368,Parent is uncle and CPS says we need cousin. What's the guardianship process?,complex,emergency,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP369,Child has aunt needs and current guardian sibling. Can we get emergency guardianship?,complex,emergency,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP370,We're dealing with sibling and the godparent parent lives out of state. What are the rules?,complex,emergency,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP371,Judge ordered voluntary but we also need full. How do we proceed?,complex,interstate,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP372,My child is cousin and the other parent is grandparent. How does this affect guardianship?,complex,special_circumstances,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP373,We have uncle involvement and need stepparent guardianship. What's the process?,complex,interstate,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP374,The child is godparent and we need emergency guardianship because aunt. What do we do?,complex,special_circumstances,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP375,How do we handle guardianship when grandparent and aunt?,complex,emergency,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP376,What if modified applies and there's also limited?,complex,emergency,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP377,URGENT: guardian died and we need immediate guardianship. What are our options? [Case 7392],complex,emergency,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP378,The godparent parent just family friend and the child needs care now. What should I do?,complex,interstate,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP379,Child's guardian sibling and we need emergency placement. How fast can we act?,complex,interstate,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP380,Both parents are grandparent and cousin is involved. Who can get guardianship?,complex,interstate,enhanced_template,False,multiple_considerations;risk_warnings;specific_guidance
+GAP381,My stepparent parent has dementia. How do I get guardianship?,simple,out_of_scope,template_adult_guardianship,True,redirect_to_appropriate_resource
+GAP382,I need guardianship for my stepparent adult child with disabilities.,simple,out_of_scope,template_adult_guardianship,True,redirect_to_appropriate_resource
+GAP383,How do I become guardian for an elderly grandparent with Alzheimer's?,simple,out_of_scope,template_adult_guardianship,True,redirect_to_appropriate_resource
+GAP384,My grandparent spouse is incapacitated. What's the guardianship process?,simple,out_of_scope,template_adult_guardianship,True,redirect_to_appropriate_resource
+GAP385,Can I get guardianship of my stepparent adult sibling?,simple,out_of_scope,template_adult_guardianship,True,redirect_to_appropriate_resource
+GAP386,My grandparent parent has dementia. How do I get guardianship?,simple,out_of_scope,template_adult_guardianship,True,redirect_to_appropriate_resource
+GAP387,Can I change custody during my modified divorce?,simple,out_of_scope,template_divorce_custody,True,redirect_to_appropriate_resource
+GAP388,How does temporary affect my divorce custody arrangement?,simple,out_of_scope,template_divorce_custody,True,redirect_to_appropriate_resource
+GAP389,My ex wants to modify our emergency custody order. What are my rights?,simple,out_of_scope,template_divorce_custody,True,redirect_to_appropriate_resource
+GAP390,We're getting divorced and disagree about contested. Who gets custody?,simple,out_of_scope,template_divorce_custody,True,redirect_to_appropriate_resource
+GAP391,Can limited be used against me in custody court?,simple,out_of_scope,template_divorce_custody,True,redirect_to_appropriate_resource
+GAP392,Can I change custody during my emergency divorce?,simple,out_of_scope,template_divorce_custody,True,redirect_to_appropriate_resource
+GAP393,I want to adopt my permanent. What's the process?,simple,out_of_scope,template_adoption,True,redirect_to_appropriate_resource
+GAP394,How do I terminate parental rights for godparent adoption?,simple,out_of_scope,template_adoption,True,redirect_to_appropriate_resource
+GAP395,Can I do a step-parent adoption if aunt?,simple,out_of_scope,template_adoption,True,redirect_to_appropriate_resource
+GAP396,What's the difference between grandparent adoption and guardianship?,simple,out_of_scope,template_adoption,True,redirect_to_appropriate_resource
+GAP397,My cousin wants to adopt my child. Do I lose all rights?,simple,out_of_scope,template_adoption,True,redirect_to_appropriate_resource
+GAP398,I want to adopt my emergency. What's the process?,simple,out_of_scope,template_adoption,True,redirect_to_appropriate_resource
+GAP399,What's the process for guardianship in Ohio County?,simple,out_of_scope,template_other_county,True,redirect_to_appropriate_resource
+GAP400,I live in aunt. Where do I file for guardianship?,simple,out_of_scope,template_other_county,True,redirect_to_appropriate_resource
+GAP401,How do cousin guardianship laws differ from Michigan?,simple,out_of_scope,template_other_county,True,redirect_to_appropriate_resource
+GAP402,Can I file in Oakland County if the child lives in Genesee?,simple,out_of_scope,template_other_county,True,redirect_to_appropriate_resource
+GAP403,We're moving to stepparent. Can we transfer the guardianship?,simple,out_of_scope,template_other_county,True,redirect_to_appropriate_resource
+GAP404,What's the process for guardianship in Kent County?,simple,out_of_scope,template_other_county,True,redirect_to_appropriate_resource
+GAP405,My stepparent was arrested. How does this affect guardianship?,simple,out_of_scope,template_criminal,True,redirect_to_appropriate_resource
+GAP406,Can someone with a grandparent conviction get guardianship?,simple,out_of_scope,template_criminal,True,redirect_to_appropriate_resource
+GAP407,The other parent has sibling charges. Can they block guardianship?,simple,out_of_scope,template_criminal,True,redirect_to_appropriate_resource
+GAP408,I'm on sibling probation. Can I still be a guardian?,simple,out_of_scope,template_criminal,True,redirect_to_appropriate_resource
+GAP409,Does cousin criminal history prevent guardianship?,simple,out_of_scope,template_criminal,True,redirect_to_appropriate_resource
+GAP410,My grandparent was arrested. How does this affect guardianship?,simple,out_of_scope,template_criminal,True,redirect_to_appropriate_resource

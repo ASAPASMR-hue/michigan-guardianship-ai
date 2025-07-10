@@ -1,0 +1,16 @@
+{
+  "trained_at": "2025-07-10T13:34:23.496484",
+  "features": {
+    "tfidf_features": 500,
+    "keyword_features": 9
+  },
+  "classes": [
+    "complex",
+    "simple",
+    "standard"
+  ],
+  "performance": {
+    "test_accuracy": 0.9868421052631579,
+    "target_accuracy": 0.85
+  }
+}

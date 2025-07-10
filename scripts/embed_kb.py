@@ -376,6 +376,90 @@ def test_retrieval(collection, model):
                 if "Thursday" in doc or "hearing" in doc:
                     print("   ✓ Contains hearing schedule information")
 
+class DocumentProcessor:
+    """Standard document processor with semantic chunking"""
+    
+    def __init__(self):
+        self.chunk_config = {
+            "size": 1000,
+            "overlap": 100,
+            "separators": [
+                "\n## ",
+                "\n### ",
+                "\nMCL ",
+                "\nPC ",
+                "\n§ ",
+                "\n- ",
+                "\n\n",
+            ]
+        }
+    
+    def process_document(self, filepath: str) -> List[Dict]:
+        """Process a single document into chunks"""
+        path = Path(filepath)
+        
+        if path.suffix == '.pdf':
+            content = extract_pdf_text(path)
+        else:
+            with open(path, 'r', encoding='utf-8') as f:
+                content = f.read()
+        
+        if not content:
+            return []
+        
+        chunks = chunk_text(content, self.chunk_config)
+        
+        # Add source metadata
+        for chunk in chunks:
+            chunk['source'] = path.name
+            chunk['content'] = chunk.pop('text')  # Rename for consistency
+        
+        return chunks
+
+class EnhancedDocumentProcessor(DocumentProcessor):
+    """Enhanced document processor with pattern-based preservation"""
+    
+    def __init__(self):
+        super().__init__()
+        self.chunk_config['preserve_together'] = [
+            r"(Form PC \d+.*?)\n",
+            r"(MCL \d+\.\d+.*?)\n",
+            r"(\$\d+.*?waiver.*?)\n",
+            r"(\d+ days?.*?)\n",
+            r"(Genesee County.*?)\n",
+            r"(ICWA.*?)\n",
+            r"(Step \d+:.*?)\n",
+        ]
+    
+    def process_document(self, filepath: str) -> List[Dict]:
+        """Process with enhanced pattern preservation"""
+        # For now, use same logic as parent
+        # In production, would implement pattern-aware chunking
+        chunks = super().process_document(filepath)
+        
+        # Simulate pattern preservation by merging adjacent chunks
+        # that match preservation patterns
+        import re
+        
+        enhanced_chunks = []
+        i = 0
+        while i < len(chunks):
+            current_chunk = chunks[i]
+            
+            # Check if chunk ends with a pattern that should be preserved
+            for pattern in self.chunk_config.get('preserve_together', []):
+                if re.search(pattern, current_chunk['content']):
+                    # Merge with next chunk if exists
+                    if i + 1 < len(chunks):
+                        current_chunk['content'] += "\n" + chunks[i + 1]['content']
+                        i += 1  # Skip next chunk
+                    break
+            
+            enhanced_chunks.append(current_chunk)
+            i += 1
+        
+        return enhanced_chunks
+
 def main():
     """Main execution function"""
     log_step("Starting document embedding", "Beginning Phase 1 embedding pipeline", "Per Part A.1-A.2")
