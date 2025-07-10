@@ -1,0 +1,48 @@
+# AUTO-GENERATED FROM /Users/claytoncanady/Library/michigan-guardianship-ai/docs/(2.1) Project Guidance Michigan Minor Guardianship AI - Complete Playbook.md - DO NOT EDIT BY HAND
+# Generated: 2025-07-09T23:56:31.259284
+
+complexity_tiers:
+  simple:
+    examples:
+    - filing fee?
+    - what form?
+    - court address?
+    top_k: 5
+    query_rewrites: 0
+    rerank_top_k: 3
+    latency_budget_ms: 800
+    latency_p95_ms: 1000
+  standard:
+    examples:
+    - grandma guardianship
+    - parent consent
+    top_k: 10
+    query_rewrites: 3
+    rerank_top_k: 5
+    latency_budget_ms: 1500
+    latency_p95_ms: 1800
+  complex:
+    examples:
+    - ICWA applies
+    - emergency + out of state
+    top_k: 15
+    query_rewrites: 5
+    rerank_top_k: 7
+    latency_budget_ms: 2000
+    latency_p95_ms: 2500
+    fallback_if_slow:
+      top_k: 10
+      query_rewrites: 3
+search_pipeline:
+  vector_search:
+    model: BAAI/bge-m3
+    weight: 0.7
+  lexical_search:
+    algorithm: BM25
+    parameters:
+      k1: 1.2
+      b: 0.75
+    weight: 0.3
+  reranker:
+    model: BAAI/bge-reranker-v2-m3
+    batch_size: 32

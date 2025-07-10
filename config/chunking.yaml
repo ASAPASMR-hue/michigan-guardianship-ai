@@ -1,0 +1,69 @@
+# AUTO-GENERATED FROM /Users/claytoncanady/Library/michigan-guardianship-ai/docs/(2.1) Project Guidance Michigan Minor Guardianship AI - Complete Playbook.md - DO NOT EDIT BY HAND
+# Generated: 2025-07-09T23:56:31.257710
+
+semantic_chunking:
+  size: 1000
+  overlap: 100
+  separators:
+  - '
+
+    ## '
+  - '
+
+    ### '
+  - '
+
+    MCL '
+  - '
+
+    PC '
+  - "\n\xA7 "
+  - '
+
+    - '
+  - '
+
+
+    '
+  preserve_together:
+  - (Form PC \d+.*?)\n
+  - (MCL \d+\.\d+.*?)\n
+  - (\$\d+.*?waiver.*?)\n
+  - (\d+ days?.*?)\n
+metadata_schema:
+  jurisdiction: Genesee County
+  doc_type:
+  - statute
+  - form
+  - procedure
+  - local_rule
+  form_numbers:
+  - PC 651
+  - PC 650
+  - MC 20
+  applies_to:
+  - full_guardianship
+  - limited_guardianship
+  - emergency
+  last_updated: '2025-07-11'
+  critical_deadlines:
+    personal_service: 7_days
+    mail_service: 14_days
+    proof_of_service: 5_days_before_hearing
+  genesee_specifics:
+    filing_fee: 175
+    hearing_days:
+    - Thursday
+    court_address: 900 S. Saginaw St., Room 502, Flint, MI 48502
+embedding_update_strategy:
+  method: incremental
+  trigger: on_document_change
+  process:
+  - Identify changed chunks via content hash
+  - Re-embed only modified chunks
+  - Update vector store with upsert
+  - Maintain version history for rollback
+  full_rebuild_triggers:
+  - embedding_model_change
+  - chunk_strategy_change
+  - quarterly_maintenance

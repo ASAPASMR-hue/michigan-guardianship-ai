@@ -1,0 +1,28 @@
+# AUTO-GENERATED FROM /Users/claytoncanady/Library/michigan-guardianship-ai/docs/(2.1) Project Guidance Michigan Minor Guardianship AI - Complete Playbook.md - DO NOT EDIT BY HAND
+# Generated: 2025-07-09T23:56:31.260009
+
+thresholds:
+  hallucination_max: 0.05
+  citation_compliance_min: 1.0
+  procedural_accuracy_min: 0.98
+genesee_patterns:
+  filing_fee: \$175
+  thursday: Thursday
+  address: 900 S\. Saginaw
+  forms: PC \d{3}|MC \d{2}
+pii_masks:
+  ssn:
+    pattern: \d{3}-\d{2}-\d{4}
+    mask: XXX-XX-####
+  phone:
+    pattern: \d{3}-\d{3}-\d{4}
+    mask: XXX-XXX-####
+  email:
+    pattern: '[\w\.-]+@[\w\.-]+'
+    action: hash
+quality_gates:
+  block_deployment_if:
+    procedural_accuracy_below: 0.98
+    hallucination_rate_above: 0.005
+    latency_p95_exceeds_budget: true
+    missing_disclaimer_rate_above: 0.01
