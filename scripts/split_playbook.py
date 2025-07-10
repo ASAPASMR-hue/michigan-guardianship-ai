@@ -12,7 +12,7 @@ from pathlib import Path
 from typing import Dict, Any
 
 # Source and destination paths
-SOURCE_DOC = Path("docs/(2.1) Project Guidance Michigan Minor Guardianship AI - Complete Playbook.md")
+SOURCE_DOC = Path("docs/Project_Guidance_v2.1.md")
 HEADER = "# AUTO-GENERATED FROM docs/Project_Guidance_v2.1.md – DO NOT EDIT BY HAND\n"
 
 def extract_code_blocks(content: str) -> Dict[str, str]:

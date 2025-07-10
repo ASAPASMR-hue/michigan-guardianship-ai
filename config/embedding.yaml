@@ -1,23 +1,5 @@
-# AUTO-GENERATED FROM /Users/claytoncanady/Library/michigan-guardianship-ai/docs/(2.1) Project Guidance Michigan Minor Guardianship AI - Complete Playbook.md - DO NOT EDIT BY HAND
-# Generated: 2025-07-09T23:56:31.258846
-
-primary_model:
-  name: BAAI/bge-m3
-  batch_size: 64
-  normalize_embeddings: true
-  encode_kwargs:
-    device: cuda
-  use_fp16: true
-fallback_model:
-  name: intfloat/multilingual-e5-large
-  enabled: true
-  trigger: primary_unavailable
-vector_database:
-  backend: chromadb
-  collection_name: michigan_guardianship_v2
-  distance_metric: cosine
-  metadata_filters:
-    mandatory:
-      jurisdiction: Genesee County
-    exclude:
-      doc_status: outdated
+# AUTO-GENERATED FROM docs/Project_Guidance_v2.1.md – DO NOT EDIT BY HAND
+primary_model: BAAI/bge-m3
+fallback_model: intfloat/multilingual-e5-large
+embed_config: null
+vector_db_config: null
