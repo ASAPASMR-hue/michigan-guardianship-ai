@@ -3,3 +3,5 @@ pandas
 pdfplumber
 lettucedetect
 rank-bm25
+scikit-learn
+scipy

@@ -7,6 +7,8 @@ Implements query complexity classification and hybrid retrieval with reranking
 import os
 import sys
 import yaml
+import pickle
+import time
 from pathlib import Path
 from typing import List, Dict, Tuple
 import chromadb
@@ -16,6 +18,7 @@ from rank_bm25 import BM25Okapi
 import numpy as np
 from collections import Counter
 import re
+from scipy.sparse import hstack
 
 # Add parent directory to path
 sys.path.append(str(Path(__file__).parent.parent))
@@ -29,7 +32,7 @@ CONSTANTS_DIR = Path(__file__).parent.parent / "constants"
 class QueryComplexityClassifier:
     """
     Classifies queries into complexity tiers for adaptive retrieval
-    with strict latency budgets
+    with strict latency budgets. Uses trained ML model with fallback.
     """
     def __init__(self):
         self.complexity_tiers = {
@@ -63,26 +66,103 @@ class QueryComplexityClassifier:
             }
         }
         
-        # Keywords for complexity detection
-        self.complex_keywords = ["icwa", "tribal", "emergency", "multi-state", "contested", "cps"]
-        self.standard_keywords = ["parent", "grandparent", "terminate", "modify", "move"]
+        # Try to load trained model
+        self.model_loaded = False
+        self.model = None
+        self.tfidf = None
+        self.label_encoder = None
+        self.complexity_keywords = None
+        self.confidence = 0.7  # Default confidence
+        
+        model_path = Path(__file__).parent.parent / "models" / "complexity_classifier.pkl"
+        if model_path.exists():
+            try:
+                with open(model_path, 'rb') as f:
+                    model_data = pickle.load(f)
+                
+                self.model = model_data['classifier']
+                self.tfidf = model_data['tfidf']
+                self.label_encoder = model_data['label_encoder']
+                self.complexity_keywords = model_data['complexity_keywords']
+                self.model_loaded = True
+                print("Loaded trained complexity classifier")
+            except Exception as e:
+                print(f"Warning: Could not load trained model: {e}")
+                self.model_loaded = False
+        
+        # Fallback keywords if model not loaded
+        if not self.model_loaded:
+            self.complex_keywords = ["icwa", "tribal", "emergency", "multi-state", "contested", "cps"]
+            self.standard_keywords = ["parent", "grandparent", "terminate", "modify", "move"]
+    
+    def _extract_features(self, questions):
+        """Extract features for ML model (mirrors training code)"""
+        # TF-IDF features
+        tfidf_features = self.tfidf.transform(questions)
+        
+        # Keyword features
+        keyword_features = []
+        for question in questions:
+            question_lower = question.lower()
+            features = []
+            
+            # Count keywords for each complexity level
+            for tier, keywords in self.complexity_keywords.items():
+                count = sum(1 for kw in keywords if kw in question_lower)
+                features.append(count)
+            
+            # Additional features
+            features.extend([
+                len(question.split()),  # Word count
+                question.count('?'),    # Question marks
+                question.count('MCL'),  # Legal citations
+                question.count('PC'),   # Form references
+                'emergency' in question_lower or 'urgent' in question_lower,  # Urgency
+                'icwa' in question_lower or 'tribal' in question_lower,       # ICWA
+            ])
+            
+            keyword_features.append(features)
+        
+        keyword_features = np.array(keyword_features)
+        
+        # Combine features
+        from scipy.sparse import hstack
+        combined_features = hstack([tfidf_features, keyword_features])
+        
+        return combined_features
     
     def classify(self, query: str) -> str:
-        """Classify query complexity based on keywords and length"""
+        """Classify query complexity using trained model or fallback"""
+        if self.model_loaded:
+            try:
+                # Use trained model
+                features = self._extract_features([query])
+                prediction = self.model.predict(features)[0]
+                self.confidence = self.model.predict_proba(features).max()
+                tier = self.label_encoder.inverse_transform([prediction])[0]
+                return tier
+            except Exception as e:
+                print(f"Model prediction failed, using fallback: {e}")
+        
+        # Fallback to keyword-based classification
         query_lower = query.lower()
+        self.confidence = 0.7  # Default confidence for keyword-based
         
         # Check for complex keywords
         if any(kw in query_lower for kw in self.complex_keywords):
+            self.confidence = 0.8
             return "complex"
         
         # Check for standard keywords or questions
         if any(kw in query_lower for kw in self.standard_keywords) or "?" in query:
             if len(query.split()) > 15:
+                self.confidence = 0.75
                 return "complex"
             return "standard"
         
         # Short queries are usually simple
         if len(query.split()) <= 5:
+            self.confidence = 0.85
             return "simple"
         
         return "standard"
@@ -283,10 +363,11 @@ class HybridRetriever:
         """Main retrieval function with complexity-aware parameters"""
         # Classify query
         complexity = self.classifier.classify(query)
+        confidence = getattr(self.classifier, 'confidence', 0.7)
         params = self.classifier.get_params(complexity)
         
         print(f"\nQuery: '{query}'")
-        print(f"Complexity: {complexity}")
+        print(f"Complexity: {complexity} (confidence: {confidence:.2f})")
         print(f"Parameters: top_k={params['top_k']}, rewrites={params['query_rewrites']}")
         
         # Generate query rewrites
@@ -312,6 +393,7 @@ class HybridRetriever:
         # Return results and metadata
         metadata = {
             'complexity': complexity,
+            'complexity_confidence': confidence,
             'num_rewrites': len(rewrites),
             'params': params
         }
