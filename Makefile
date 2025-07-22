@@ -1,10 +1,15 @@
-.PHONY: extract-configs phase1 clean-chroma test-phase1 clean-all
+.PHONY: extract-configs phase1 clean-chroma test-phase1 clean-all check-token
+
+# Check for HF_TOKEN
+check-token:
+	@python -c "import os; assert os.getenv('HF_TOKEN'), 'ERROR: HF_TOKEN not set. See SETUP.md for instructions.'"
+	@echo "✓ HF_TOKEN is configured"
 
 extract-configs:
 	python scripts/split_playbook.py
 
 # Phase 1: Document Embedding, Retrieval, and Validation
-phase1: extract-configs
+phase1: check-token extract-configs
 	@echo "=== Phase 1: Building Michigan Guardianship AI Foundation ==="
 	@echo "[$(shell date +'%Y-%m-%d %H:%M:%S')] Starting Phase 1 pipeline..." | tee -a logs/phase1_pipeline.log
 	@echo "\n1. Embedding knowledge base documents..."
@@ -25,10 +30,9 @@ clean-chroma:
 	@echo "ChromaDB cleaned."
 
 # Run tests with small models
-test-phase1:
+test-phase1: check-token
 	@echo "Running Phase 1 tests with small models..."
 	@export USE_SMALL_MODEL=true && \
-	export HF_TOKEN=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 && \
 	make phase1
 
 # Clean all generated files

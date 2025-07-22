@@ -21,7 +21,7 @@ from tqdm import tqdm
 # Add parent directory to path
 sys.path.append(str(Path(__file__).parent.parent))
 from scripts.log_step import log_step
-
+from scripts.config_utils import load_hf_token, get_model_config
 # Configuration paths
 CONFIG_DIR = Path(__file__).parent.parent / "config"
 KB_DIR = Path(__file__).parent.parent / "kb_files"
@@ -235,8 +235,12 @@ def load_documents(genesee_constants: dict) -> List[Dict]:
 def embed_documents(documents: List[Dict], chunking_config: dict, embedding_config: dict):
     """Embed documents into ChromaDB"""
     # Set HuggingFace token from environment
-    hf_token = os.getenv('HF_TOKEN', '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')
-    os.environ['HF_TOKEN'] = hf_token
+    # Load HuggingFace token securely
+    hf_token = load_hf_token()
+    os.environ["HF_TOKEN"] = hf_token
+    # Load HuggingFace token securely
+    hf_token = load_hf_token()
+    os.environ["HF_TOKEN"] = hf_token
     
     # Initialize embedding model with error handling
     try:

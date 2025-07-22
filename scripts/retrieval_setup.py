@@ -23,6 +23,7 @@ from scipy.sparse import hstack
 # Add parent directory to path
 sys.path.append(str(Path(__file__).parent.parent))
 from scripts.log_step import log_step
+from scripts.config_utils import load_hf_token
 
 # Configuration paths
 CONFIG_DIR = Path(__file__).parent.parent / "config"
@@ -216,7 +217,7 @@ class HybridRetriever:
         self.embed_model = SentenceTransformer(embed_model)
         
         print(f"Loading reranking model: {rerank_model}")
-        # Set HF token for CrossEncoder
+        hf_token = load_hf_token()
         hf_token = os.getenv('HF_TOKEN', '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')
         os.environ['HF_TOKEN'] = hf_token
         

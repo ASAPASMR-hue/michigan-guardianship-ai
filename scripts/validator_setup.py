@@ -25,6 +25,7 @@ import numpy as np
 # Add parent directory to path
 sys.path.append(str(Path(__file__).parent.parent))
 from scripts.log_step import log_step
+from scripts.config_utils import load_hf_token
 
 # Configuration paths
 CONFIG_DIR = Path(__file__).parent.parent / "config"
@@ -41,7 +42,7 @@ class ResponseValidator:
         # Initialize hallucination detector
         if LETTUCE_AVAILABLE:
             try:
-                # Set HF token before initializing
+                hf_token = load_hf_token()
                 hf_token = os.getenv('HF_TOKEN', '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')
                 os.environ['HF_TOKEN'] = hf_token
                 os.environ['HUGGING_FACE_HUB_TOKEN'] = hf_token
