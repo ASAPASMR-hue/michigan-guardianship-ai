@@ -235,8 +235,13 @@ def load_documents(genesee_constants: dict) -> List[Dict]:
 def embed_documents(documents: List[Dict], chunking_config: dict, embedding_config: dict):
     """Embed documents into ChromaDB"""
     # Set HuggingFace token from environment
-    hf_token = os.getenv('HF_TOKEN', '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')
-    os.environ['HF_TOKEN'] = hf_token
+    # Get HuggingFace token from environment
+    hf_token = os.getenv('HUGGING_FACE_HUB_TOKEN')
+    if not hf_token:
+        print("Warning: HUGGING_FACE_HUB_TOKEN not set. Some models may require authentication.")
+        print("Set it with: export HUGGING_FACE_HUB_TOKEN='your_token_here'")
+    else:
+        os.environ['HF_TOKEN'] = hf_token
     
     # Initialize embedding model with error handling
     try:

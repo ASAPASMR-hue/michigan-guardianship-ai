@@ -217,8 +217,10 @@ class HybridRetriever:
         
         print(f"Loading reranking model: {rerank_model}")
         # Set HF token for CrossEncoder
-        hf_token = os.getenv('HF_TOKEN', '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')
-        os.environ['HF_TOKEN'] = hf_token
+        # Get HuggingFace token from environment
+        hf_token = os.getenv('HUGGING_FACE_HUB_TOKEN')
+        if hf_token:
+            os.environ['HF_TOKEN'] = hf_token
         
         # CrossEncoder needs trust_remote_code for some models
         self.reranker = CrossEncoder(rerank_model, trust_remote_code=True)
@@ -247,14 +249,52 @@ class HybridRetriever:
         self.bm25 = BM25Okapi(tokenized_docs)
     
     def generate_query_rewrites(self, query: str, num_rewrites: int) -> List[str]:
-        """Generate query variations for better retrieval"""
+        """Generate query variations for better retrieval with legal term expansion"""
         rewrites = [query]  # Include original
         
         if num_rewrites == 0:
             return rewrites
         
-        # Simple rewrite strategies
+        # Legal term expansions
+        LEGAL_EXPANSIONS = {
+            "icwa": ["Indian Child Welfare Act", "ICWA requirements", "tribal notification"],
+            "tribe": ["tribal notification", "Native American", "Indian tribe"],
+            "emergency": ["immediate danger", "urgent", "emergency guardianship"],
+            "fee waiver": ["cannot afford", "MC 20", "waive filing fee", "financial hardship"],
+            "notify": ["notification requirements", "serve notice", "14 days notice"],
+            "forms": ["PC 651", "PC 652", "petition forms", "guardianship documents"],
+            "hearing": ["court hearing", "Thursday hearing", "guardianship hearing"],
+            "parents": ["biological parents", "mother and father", "parental rights"],
+            "placement": ["placement preferences", "relative placement", "kinship care"],
+            "efforts": ["active efforts", "reasonable efforts", "reunification efforts"]
+        }
+        
+        # Abbreviation expansions
+        ABBREVIATIONS = {
+            "pc": "petition for custody",
+            "mc": "miscellaneous civil",
+            "mcl": "Michigan Compiled Laws",
+            "gm": "Genesee Michigan"
+        }
+        
         variations = []
+        query_lower = query.lower()
+        
+        # Expand legal terms
+        for term, expansions in LEGAL_EXPANSIONS.items():
+            if term in query_lower:
+                for expansion in expansions:
+                    expanded_query = query_lower.replace(term, expansion)
+                    if expanded_query != query_lower:
+                        variations.append(expanded_query.title())
+        
+        # Expand abbreviations
+        words = query_lower.split()
+        for i, word in enumerate(words):
+            if word in ABBREVIATIONS:
+                words[i] = ABBREVIATIONS[word]
+                variations.append(" ".join(words).title())
+                words[i] = word  # Reset for next iteration
         
         # Add question form
         if "?" not in query:
@@ -265,22 +305,80 @@ class HybridRetriever:
         variations.append(f"{query} Michigan guardianship")
         variations.append(f"{query} Genesee County")
         
-        # Add common variants
-        if "fee" in query.lower():
-            variations.append("filing cost")
-            variations.append("court fees waiver MC 20")
+        # Add common variants based on query content
+        if "fee" in query_lower:
+            variations.extend([
+                "filing cost $175",
+                "court fees waiver MC 20",
+                "guardianship filing fee Genesee County"
+            ])
         
-        if "form" in query.lower():
-            variations.append("PC forms guardianship")
-            variations.append("petition documents")
+        if "form" in query_lower:
+            variations.extend([
+                "PC 651 PC 652 forms",
+                "petition documents guardianship",
+                "what forms needed minor guardianship"
+            ])
+        
+        if "court" in query_lower and "location" in query_lower:
+            variations.extend([
+                "900 S. Saginaw Street Flint",
+                "Genesee County Probate Court address",
+                "where is probate court located"
+            ])
+        
+        # Remove duplicates while preserving order
+        seen = set()
+        unique_variations = []
+        for v in variations:
+            if v.lower() not in seen and v.lower() != query.lower():
+                seen.add(v.lower())
+                unique_variations.append(v)
         
         # Return requested number of rewrites
-        rewrites.extend(variations[:num_rewrites])
+        rewrites.extend(unique_variations[:num_rewrites])
         return rewrites
     
     def hybrid_search(self, query: str, top_k: int = 10, 
                      vector_weight: float = 0.7) -> List[Dict]:
-        """Perform hybrid search combining vector and BM25"""
+        """Perform hybrid search combining vector and BM25 with keyword boosting"""
+        
+        # Define critical keywords to boost
+        CRITICAL_KEYWORDS = {
+            # Financial
+            "$175": 1.5,
+            "filing fee": 1.3,
+            "fee waiver": 1.3,
+            "MC 20": 1.5,
+            "cannot afford": 1.3,
+            
+            # Time/Schedule
+            "Thursday": 1.5,
+            "9:00 AM": 1.3,
+            "14 days": 1.3,
+            
+            # Legal citations
+            "MCL 712B": 1.5,
+            "ICWA": 1.5,
+            "Indian Child Welfare Act": 1.5,
+            
+            # Forms
+            "PC 651": 1.5,
+            "PC 652": 1.5,
+            "PC 654": 1.3,
+            "MC 97": 1.3,
+            
+            # Key procedures
+            "notify tribe": 1.5,
+            "tribal notification": 1.5,
+            "placement preferences": 1.3,
+            "active efforts": 1.3,
+            
+            # Location
+            "900 S. Saginaw": 1.3,
+            "Flint": 1.2,
+            "48502": 1.2
+        }
         
         # Vector search
         query_embedding = self.embed_model.encode(query, normalize_embeddings=True)
@@ -299,6 +397,7 @@ class HybridRetriever:
         
         # Combine results
         combined_scores = {}
+        keyword_boosts = {}  # Track which docs got boosted
         
         # Add vector results
         for i, (doc_id, distance) in enumerate(zip(
@@ -321,6 +420,23 @@ class HybridRetriever:
                 else:
                     combined_scores[doc_id] = lexical_weight * normalized_score
         
+        # Apply keyword boosting
+        for doc_id in combined_scores:
+            idx = self.all_ids.index(doc_id)
+            doc_text = self.all_docs[idx].lower()
+            
+            boost_factor = 1.0
+            boosted_keywords = []
+            
+            for keyword, boost in CRITICAL_KEYWORDS.items():
+                if keyword.lower() in doc_text:
+                    boost_factor = max(boost_factor, boost)
+                    boosted_keywords.append(keyword)
+            
+            if boost_factor > 1.0:
+                combined_scores[doc_id] *= boost_factor
+                keyword_boosts[doc_id] = boosted_keywords
+        
         # Sort by combined score
         sorted_ids = sorted(combined_scores.keys(), 
                           key=lambda x: combined_scores[x], 
@@ -330,12 +446,18 @@ class HybridRetriever:
         results = []
         for doc_id in sorted_ids:
             idx = self.all_ids.index(doc_id)
-            results.append({
+            result = {
                 'id': doc_id,
                 'document': self.all_docs[idx],
                 'metadata': self.all_metadata[idx],
                 'score': combined_scores[doc_id]
-            })
+            }
+            
+            # Add boost info for debugging
+            if doc_id in keyword_boosts:
+                result['boosted_keywords'] = keyword_boosts[doc_id]
+            
+            results.append(result)
         
         return results
     

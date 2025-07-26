@@ -1,0 +1,326 @@
+{
+  "timestamp": "2025-07-26T02:19:30.283803",
+  "pipeline_tests": {
+    "document_embedding": {
+      "status": "PASSED",
+      "chunks_created": 3,
+      "chunks_stored": 3,
+      "test_retrieval_count": 3,
+      "time_seconds": 2.218733072280884
+    },
+    "latency_compliance": {
+      "status": "PASSED",
+      "summary": {
+        "simple": {
+          "compliance_rate": 100.0,
+          "average_latency_ms": 83.46226366605454,
+          "queries_tested": 3
+        },
+        "standard": {
+          "compliance_rate": 100.0,
+          "average_latency_ms": 114.15060400031507,
+          "queries_tested": 2
+        },
+        "complex": {
+          "compliance_rate": 100.0,
+          "average_latency_ms": 79.54856250216835,
+          "queries_tested": 2
+        }
+      },
+      "details": {
+        "simple": [
+          {
+            "query": "filing fee?",
+            "latency_ms": 179.09058299846947,
+            "budget_ms": 800,
+            "met_budget": true
+          },
+          {
+            "query": "court address?",
+            "latency_ms": 35.925207997934194,
+            "budget_ms": 800,
+            "met_budget": true
+          },
+          {
+            "query": "what form?",
+            "latency_ms": 35.37100000175997,
+            "budget_ms": 800,
+            "met_budget": true
+          }
+        ],
+        "standard": [
+          {
+            "query": "how to file guardianship",
+            "latency_ms": 130.65404200096964,
+            "budget_ms": 1500,
+            "met_budget": true
+          },
+          {
+            "query": "parent consent needed",
+            "latency_ms": 97.6471659996605,
+            "budget_ms": 1500,
+            "met_budget": true
+          }
+        ],
+        "complex": [
+          {
+            "query": "ICWA emergency placement",
+            "latency_ms": 103.35145800127066,
+            "budget_ms": 800,
+            "met_budget": true
+          },
+          {
+            "query": "multi-state guardianship",
+            "latency_ms": 55.745667003066046,
+            "budget_ms": 1500,
+            "met_budget": true
+          }
+        ]
+      }
+    }
+  },
+  "golden_qa_tests": [
+    {
+      "question": "What is the filing fee for guardianship in Genesee County?",
+      "expected_type": "simple",
+      "tests": {
+        "retrieval": {
+          "status": "PASSED",
+          "chunks_retrieved": 3,
+          "complexity": "simple",
+          "time_seconds": 0.26697397232055664
+        },
+        "validation": {
+          "status": "PASSED",
+          "out_of_scope": true
+        },
+        "content_check": {
+          "status": "PASSED"
+        }
+      },
+      "overall_status": "PASSED"
+    },
+    {
+      "question": "Where is the Genesee County Probate Court located?",
+      "expected_type": "simple",
+      "tests": {
+        "retrieval": {
+          "status": "PASSED",
+          "chunks_retrieved": 3,
+          "complexity": "simple",
+          "time_seconds": 0.14104580879211426
+        },
+        "validation": {
+          "status": "PASSED",
+          "out_of_scope": true
+        },
+        "content_check": {
+          "status": "FAILED",
+          "missing_facts": [
+            "900 S. Saginaw",
+            "Flint",
+            "48502"
+          ],
+          "forbidden_found": []
+        }
+      },
+      "overall_status": "FAILED"
+    },
+    {
+      "question": "What day are guardianship hearings held?",
+      "expected_type": "simple",
+      "tests": {
+        "retrieval": {
+          "status": "PASSED",
+          "chunks_retrieved": 3,
+          "complexity": "standard",
+          "time_seconds": 0.1071469783782959
+        },
+        "validation": {
+          "status": "PASSED",
+          "out_of_scope": false
+        },
+        "content_check": {
+          "status": "PASSED"
+        }
+      },
+      "overall_status": "PASSED"
+    },
+    {
+      "question": "What forms do I need to file for minor guardianship?",
+      "expected_type": "standard",
+      "tests": {
+        "retrieval": {
+          "status": "PASSED",
+          "chunks_retrieved": 3,
+          "complexity": "simple",
+          "time_seconds": 0.13084006309509277
+        },
+        "validation": {
+          "status": "PASSED",
+          "out_of_scope": false
+        },
+        "content_check": {
+          "status": "PASSED"
+        }
+      },
+      "overall_status": "PASSED"
+    },
+    {
+      "question": "How do I request a fee waiver?",
+      "expected_type": "standard",
+      "tests": {
+        "retrieval": {
+          "status": "PASSED",
+          "chunks_retrieved": 3,
+          "complexity": "simple",
+          "time_seconds": 0.1171731948852539
+        },
+        "validation": {
+          "status": "PASSED",
+          "out_of_scope": false
+        },
+        "content_check": {
+          "status": "FAILED",
+          "missing_facts": [
+            "MC 20",
+            "financial",
+            "cannot afford"
+          ],
+          "forbidden_found": []
+        }
+      },
+      "overall_status": "FAILED"
+    },
+    {
+      "question": "Who needs to be notified about the guardianship hearing?",
+      "expected_type": "standard",
+      "tests": {
+        "retrieval": {
+          "status": "PASSED",
+          "chunks_retrieved": 3,
+          "complexity": "standard",
+          "time_seconds": 0.15968012809753418
+        },
+        "validation": {
+          "status": "PASSED",
+          "out_of_scope": false
+        },
+        "content_check": {
+          "status": "FAILED",
+          "missing_facts": [
+            "parents",
+            "14 days",
+            "interested parties"
+          ],
+          "forbidden_found": []
+        }
+      },
+      "overall_status": "FAILED"
+    },
+    {
+      "question": "How does ICWA apply to emergency guardianship proceedings?",
+      "expected_type": "complex",
+      "tests": {
+        "retrieval": {
+          "status": "PASSED",
+          "chunks_retrieved": 3,
+          "complexity": "complex",
+          "time_seconds": 0.07648515701293945
+        },
+        "validation": {
+          "status": "PASSED",
+          "out_of_scope": false
+        },
+        "content_check": {
+          "status": "FAILED",
+          "missing_facts": [
+            "tribal notification",
+            "emergency"
+          ],
+          "forbidden_found": []
+        }
+      },
+      "overall_status": "FAILED"
+    },
+    {
+      "question": "My grandson is a tribal member and I need emergency guardianship. What special requirements apply?",
+      "expected_type": "complex",
+      "tests": {
+        "retrieval": {
+          "status": "PASSED",
+          "chunks_retrieved": 3,
+          "complexity": "complex",
+          "time_seconds": 0.15969610214233398
+        },
+        "validation": {
+          "status": "PASSED",
+          "out_of_scope": false
+        },
+        "content_check": {
+          "status": "FAILED",
+          "missing_facts": [
+            "notify tribe",
+            "active efforts",
+            "placement preferences"
+          ],
+          "forbidden_found": []
+        }
+      },
+      "overall_status": "FAILED"
+    },
+    {
+      "question": "How do I get guardianship of my elderly mother with dementia?",
+      "expected_type": "out_of_scope",
+      "tests": {
+        "retrieval": {
+          "status": "PASSED",
+          "chunks_retrieved": 3,
+          "complexity": "standard",
+          "time_seconds": 0.10888409614562988
+        },
+        "validation": {
+          "status": "PASSED",
+          "out_of_scope": true
+        },
+        "content_check": {
+          "status": "PASSED"
+        }
+      },
+      "overall_status": "PASSED"
+    },
+    {
+      "question": "I need guardianship information for Oakland County",
+      "expected_type": "out_of_scope",
+      "tests": {
+        "retrieval": {
+          "status": "PASSED",
+          "chunks_retrieved": 3,
+          "complexity": "simple",
+          "time_seconds": 0.029438018798828125
+        },
+        "validation": {
+          "status": "PASSED",
+          "out_of_scope": true
+        },
+        "content_check": {
+          "status": "PASSED"
+        }
+      },
+      "overall_status": "PASSED"
+    }
+  ],
+  "summary": {
+    "golden_qa_tests": {
+      "total": 10,
+      "passed": 5,
+      "failed": 5,
+      "pass_rate": 50.0
+    },
+    "pipeline_tests": {
+      "total": 2,
+      "passed": 2,
+      "failed": 0
+    }
+  }
+}

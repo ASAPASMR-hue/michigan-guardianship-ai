@@ -42,9 +42,10 @@ class ResponseValidator:
         if LETTUCE_AVAILABLE:
             try:
                 # Set HF token before initializing
-                hf_token = os.getenv('HF_TOKEN', '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')
-                os.environ['HF_TOKEN'] = hf_token
-                os.environ['HUGGING_FACE_HUB_TOKEN'] = hf_token
+                # Get HuggingFace token from environment
+                hf_token = os.getenv('HUGGING_FACE_HUB_TOKEN')
+                if hf_token:
+                    os.environ['HF_TOKEN'] = hf_token
                 
                 self.hallucination_detector = HallucinationDetector(
                     method="transformer",

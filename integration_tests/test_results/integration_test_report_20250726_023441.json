@@ -1,0 +1,142 @@
+{
+  "timestamp": "2025-07-26T02:34:31.138373",
+  "pipeline_tests": {
+    "document_embedding": {
+      "status": "PASSED",
+      "chunks_created": 3,
+      "chunks_stored": 3,
+      "test_retrieval_count": 3,
+      "time_seconds": 1.5908920764923096
+    }
+  },
+  "golden_qa_tests": [
+    {
+      "question": "What is the filing fee for guardianship in Genesee County?",
+      "expected_type": "simple",
+      "tests": {
+        "retrieval": {
+          "status": "PASSED",
+          "chunks_retrieved": 3,
+          "complexity": "simple",
+          "time_seconds": 0.10144519805908203
+        },
+        "validation": {
+          "status": "PASSED",
+          "out_of_scope": true
+        },
+        "content_check": {
+          "status": "PASSED"
+        }
+      },
+      "overall_status": "PASSED"
+    },
+    {
+      "question": "Where is the Genesee County Probate Court located?",
+      "expected_type": "simple",
+      "tests": {
+        "retrieval": {
+          "status": "PASSED",
+          "chunks_retrieved": 3,
+          "complexity": "simple",
+          "time_seconds": 0.08462095260620117
+        },
+        "validation": {
+          "status": "PASSED",
+          "out_of_scope": true
+        },
+        "content_check": {
+          "status": "FAILED",
+          "missing_facts": [
+            "900 S. Saginaw",
+            "Flint",
+            "48502"
+          ],
+          "forbidden_found": []
+        }
+      },
+      "overall_status": "FAILED"
+    },
+    {
+      "question": "What day are guardianship hearings held?",
+      "expected_type": "simple",
+      "tests": {
+        "retrieval": {
+          "status": "PASSED",
+          "chunks_retrieved": 3,
+          "complexity": "standard",
+          "time_seconds": 0.1037449836730957
+        },
+        "validation": {
+          "status": "PASSED",
+          "out_of_scope": false
+        },
+        "content_check": {
+          "status": "PASSED"
+        }
+      },
+      "overall_status": "PASSED"
+    },
+    {
+      "question": "What forms do I need to file for minor guardianship?",
+      "expected_type": "standard",
+      "tests": {},
+      "overall_status": "FAILED",
+      "error": "[Errno 32] Broken pipe"
+    },
+    {
+      "question": "How do I request a fee waiver?",
+      "expected_type": "standard",
+      "tests": {},
+      "overall_status": "FAILED",
+      "error": "[Errno 32] Broken pipe"
+    },
+    {
+      "question": "Who needs to be notified about the guardianship hearing?",
+      "expected_type": "standard",
+      "tests": {},
+      "overall_status": "FAILED",
+      "error": "[Errno 32] Broken pipe"
+    },
+    {
+      "question": "How does ICWA apply to emergency guardianship proceedings?",
+      "expected_type": "complex",
+      "tests": {},
+      "overall_status": "FAILED",
+      "error": "[Errno 32] Broken pipe"
+    },
+    {
+      "question": "My grandson is a tribal member and I need emergency guardianship. What special requirements apply?",
+      "expected_type": "complex",
+      "tests": {},
+      "overall_status": "FAILED",
+      "error": "[Errno 32] Broken pipe"
+    },
+    {
+      "question": "How do I get guardianship of my elderly mother with dementia?",
+      "expected_type": "out_of_scope",
+      "tests": {},
+      "overall_status": "FAILED",
+      "error": "[Errno 32] Broken pipe"
+    },
+    {
+      "question": "I need guardianship information for Oakland County",
+      "expected_type": "out_of_scope",
+      "tests": {},
+      "overall_status": "FAILED",
+      "error": "[Errno 32] Broken pipe"
+    }
+  ],
+  "summary": {
+    "golden_qa_tests": {
+      "total": 10,
+      "passed": 2,
+      "failed": 8,
+      "pass_rate": 20.0
+    },
+    "pipeline_tests": {
+      "total": 1,
+      "passed": 1,
+      "failed": 0
+    }
+  }
+}

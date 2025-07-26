@@ -1,0 +1,309 @@
+{
+  "timestamp": "2025-07-26T02:21:04.191367",
+  "mode": "mock",
+  "tests": [
+    {
+      "query": "What is the filing fee for guardianship in Genesee County?",
+      "expected_type": "simple",
+      "timestamp": "2025-07-26T02:21:04.191380",
+      "steps": {
+        "retrieval": {
+          "status": "success",
+          "chunks_retrieved": 3,
+          "complexity": "simple",
+          "time_seconds": 0.2979452610015869
+        },
+        "generation": {
+          "status": "success",
+          "response_length": 180,
+          "time_seconds": 0.00011920928955078125
+        },
+        "validation": {
+          "status": "success",
+          "passed": true,
+          "time_seconds": 0.00035190582275390625,
+          "out_of_scope": true
+        },
+        "content_verification": {
+          "status": "success",
+          "issues": []
+        }
+      },
+      "response": "The filing fee for minor guardianship in Genesee County is $175 (Document 8: Filing for Guardianship). If you cannot afford this fee, you can request a fee waiver using Form MC 20.",
+      "overall_status": "PASSED",
+      "total_time_seconds": 0.2984163761138916
+    },
+    {
+      "query": "Where is the Genesee County Probate Court?",
+      "expected_type": "simple",
+      "timestamp": "2025-07-26T02:21:04.489848",
+      "steps": {
+        "retrieval": {
+          "status": "success",
+          "chunks_retrieved": 3,
+          "complexity": "simple",
+          "time_seconds": 0.11871480941772461
+        },
+        "generation": {
+          "status": "success",
+          "response_length": 113,
+          "time_seconds": 8.20159912109375e-05
+        },
+        "validation": {
+          "status": "success",
+          "passed": true,
+          "time_seconds": 1.71661376953125e-05,
+          "out_of_scope": true
+        },
+        "content_verification": {
+          "status": "success",
+          "issues": []
+        }
+      },
+      "response": "The Genesee County Probate Court is located at 900 S. Saginaw Street, Flint, MI 48502 (Genesee County Specifics).",
+      "overall_status": "PASSED",
+      "total_time_seconds": 0.11881399154663086
+    },
+    {
+      "query": "What day are guardianship hearings?",
+      "expected_type": "simple",
+      "timestamp": "2025-07-26T02:21:04.608700",
+      "steps": {
+        "retrieval": {
+          "status": "success",
+          "chunks_retrieved": 3,
+          "complexity": "simple",
+          "time_seconds": 0.1086578369140625
+        },
+        "generation": {
+          "status": "success",
+          "response_length": 187,
+          "time_seconds": 4.6253204345703125e-05
+        },
+        "validation": {
+          "status": "success",
+          "passed": true,
+          "time_seconds": 6.920616865158081,
+          "scores": {
+            "hallucination": 0.0,
+            "citation_compliance": 1.0,
+            "procedural_accuracy": 1.0,
+            "mode_effectiveness": 0.7200000000000001
+          }
+        },
+        "content_verification": {
+          "status": "success",
+          "issues": []
+        },
+        "hallucination_check": {
+          "status": "success",
+          "score": 0.0
+        }
+      },
+      "response": "Guardianship hearings in Genesee County are held on Thursdays (Genesee County Specifics). Hearings typically begin at 9:00 AM, and you should arrive at least 15 minutes early to check in.",
+      "overall_status": "PASSED",
+      "total_time_seconds": 7.029320955276489
+    },
+    {
+      "query": "What forms do I need to file for guardianship of my grandson?",
+      "expected_type": "standard",
+      "timestamp": "2025-07-26T02:21:11.638056",
+      "steps": {
+        "retrieval": {
+          "status": "success",
+          "chunks_retrieved": 5,
+          "complexity": "standard",
+          "time_seconds": 0.4730567932128906
+        },
+        "generation": {
+          "status": "success",
+          "response_length": 290,
+          "time_seconds": 0.00011491775512695312
+        },
+        "validation": {
+          "status": "success",
+          "passed": true,
+          "time_seconds": 6.294490098953247,
+          "scores": {
+            "hallucination": 0.0,
+            "citation_compliance": 0.0,
+            "procedural_accuracy": 1.0,
+            "mode_effectiveness": 1.0
+          }
+        },
+        "content_verification": {
+          "status": "success",
+          "issues": []
+        },
+        "hallucination_check": {
+          "status": "success",
+          "score": 0.0
+        }
+      },
+      "response": "To file for minor guardianship, you'll need these key forms: - Form PC 651: Petition for Appointment of Guardian of a Minor - Form PC 652: Notice of Hearing - Form PC 654: Testimony to Identify Heirs (if applicable) All forms can be obtained from the Genesee County Probate Court or online.",
+      "overall_status": "PASSED",
+      "total_time_seconds": 6.767661809921265
+    },
+    {
+      "query": "How do I get guardianship if the parents don't agree?",
+      "expected_type": "standard",
+      "timestamp": "2025-07-26T02:21:18.405765",
+      "steps": {
+        "retrieval": {
+          "status": "success",
+          "chunks_retrieved": 5,
+          "complexity": "standard",
+          "time_seconds": 0.334212064743042
+        },
+        "generation": {
+          "status": "success",
+          "response_length": 194,
+          "time_seconds": 0.0002818107604980469
+        },
+        "validation": {
+          "status": "success",
+          "passed": true,
+          "time_seconds": 6.441740036010742,
+          "scores": {
+            "hallucination": 0.0,
+            "citation_compliance": 1.0,
+            "procedural_accuracy": 1.0,
+            "mode_effectiveness": 1.0
+          }
+        },
+        "content_verification": {
+          "status": "failed",
+          "issues": [
+            "Missing expected fact: notice",
+            "Missing expected fact: hearing",
+            "Missing expected fact: best interests"
+          ]
+        },
+        "hallucination_check": {
+          "status": "success",
+          "score": 0.0
+        }
+      },
+      "response": "I can help you with information about minor guardianship in Genesee County. Please let me know specifically what you'd like to know about the guardianship process, required forms, or procedures.",
+      "overall_status": "FAILED",
+      "total_time_seconds": 6.776233911514282
+    },
+    {
+      "query": "My granddaughter is a tribal member and I need emergency guardianship. What are the requirements?",
+      "expected_type": "complex",
+      "timestamp": "2025-07-26T02:21:25.182058",
+      "steps": {
+        "retrieval": {
+          "status": "success",
+          "chunks_retrieved": 7,
+          "complexity": "complex",
+          "time_seconds": 0.6190729141235352
+        },
+        "generation": {
+          "status": "success",
+          "response_length": 1012,
+          "time_seconds": 0.0001678466796875
+        },
+        "validation": {
+          "status": "success",
+          "passed": true,
+          "time_seconds": 6.48524284362793,
+          "scores": {
+            "hallucination": 0.0,
+            "citation_compliance": 0.6666666666666667,
+            "procedural_accuracy": 1.0,
+            "mode_effectiveness": 0.8
+          }
+        },
+        "content_verification": {
+          "status": "success",
+          "issues": []
+        },
+        "hallucination_check": {
+          "status": "success",
+          "score": 0.0
+        }
+      },
+      "response": "The Indian Child Welfare Act (ICWA) applies when a child is a member of or eligible for membership in a federally recognized tribe (Document 4: ICWA Requirements). Key requirements include: - Immediate tribal notification is mandatory (MCL 712B.15) - The tribe has the right to intervene in proceedings - Active efforts must be made to prevent family breakup - Placement preferences prioritize Indian families Even in emergency situations, tribal notification is required and ICWA compliance must be ensured within specified timeframes. For emergency guardianship situations: - File a petition for temporary guardianship (Form PC 651) - The court can grant temporary orders if there's immediate risk to the child - You must still provide notice to parents and interested parties - Emergency orders are temporary and a full hearing will be scheduled \nNote: This is general information about Michigan guardianship procedures. For advice specific to your situation, please consult with a licensed Michigan attorney.",
+      "overall_status": "PASSED",
+      "total_time_seconds": 7.104483604431152
+    },
+    {
+      "query": "How do I get guardianship of my mother who has Alzheimer's?",
+      "expected_type": "out_of_scope",
+      "timestamp": "2025-07-26T02:21:32.286607",
+      "steps": {
+        "retrieval": {
+          "status": "success",
+          "chunks_retrieved": 5,
+          "complexity": "standard",
+          "time_seconds": 0.36453819274902344
+        },
+        "generation": {
+          "status": "success",
+          "response_length": 194,
+          "time_seconds": 0.00013113021850585938
+        },
+        "validation": {
+          "status": "success",
+          "passed": true,
+          "time_seconds": 2.47955322265625e-05,
+          "out_of_scope": true
+        },
+        "content_verification": {
+          "status": "failed",
+          "issues": [
+            "Missing expected fact: adult guardianship",
+            "Missing expected fact: elder law"
+          ]
+        }
+      },
+      "response": "I can help you with information about minor guardianship in Genesee County. Please let me know specifically what you'd like to know about the guardianship process, required forms, or procedures.",
+      "overall_status": "FAILED",
+      "total_time_seconds": 0.36469411849975586
+    },
+    {
+      "query": "I need guardianship information for Wayne County",
+      "expected_type": "out_of_scope",
+      "timestamp": "2025-07-26T02:21:32.651368",
+      "steps": {
+        "retrieval": {
+          "status": "success",
+          "chunks_retrieved": 3,
+          "complexity": "simple",
+          "time_seconds": 0.12520503997802734
+        },
+        "generation": {
+          "status": "success",
+          "response_length": 194,
+          "time_seconds": 7.295608520507812e-05
+        },
+        "validation": {
+          "status": "success",
+          "passed": true,
+          "time_seconds": 1.71661376953125e-05,
+          "out_of_scope": true
+        },
+        "content_verification": {
+          "status": "failed",
+          "issues": [
+            "Missing expected fact: contact",
+            "Missing expected fact: probate court"
+          ]
+        }
+      },
+      "response": "I can help you with information about minor guardianship in Genesee County. Please let me know specifically what you'd like to know about the guardianship process, required forms, or procedures.",
+      "overall_status": "FAILED",
+      "total_time_seconds": 0.12529516220092773
+    }
+  ],
+  "summary": {
+    "total_tests": 8,
+    "passed": 5,
+    "failed": 3,
+    "errors": 0,
+    "pass_rate": 62.5,
+    "avg_retrieval_time": 0.3051753640174866,
+    "avg_generation_time": 0.00012701749801635742
+  }
+}

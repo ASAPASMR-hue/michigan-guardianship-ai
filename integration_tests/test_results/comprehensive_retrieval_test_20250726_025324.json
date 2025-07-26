@@ -1,0 +1,482 @@
+{
+  "timestamp": "2025-07-26T02:52:58.811326",
+  "retrieval_accuracy": [
+    {
+      "category": "simple_factual",
+      "total_queries": 4,
+      "passed": 3,
+      "pass_rate": 75.0,
+      "avg_relevance": 0.75,
+      "avg_retrieval_time": 0.16240757703781128,
+      "details": [
+        {
+          "query": "What is the filing fee for guardianship in Genesee County?",
+          "chunks_retrieved": 3,
+          "relevance_score": 1.0,
+          "avg_similarity_score": 5.770529429117839,
+          "found_content": [
+            "$175",
+            "fee",
+            "Genesee"
+          ],
+          "missing_content": [],
+          "retrieval_time": 0.31107497215270996,
+          "complexity": "simple",
+          "passed": true
+        },
+        {
+          "query": "Where is the Genesee County Probate Court?",
+          "chunks_retrieved": 3,
+          "relevance_score": 1.0,
+          "avg_similarity_score": 2.2562934954961142,
+          "found_content": [
+            "900 S. Saginaw",
+            "Flint",
+            "48502"
+          ],
+          "missing_content": [],
+          "retrieval_time": 0.12084197998046875,
+          "complexity": "simple",
+          "passed": true
+        },
+        {
+          "query": "What day are hearings?",
+          "chunks_retrieved": 3,
+          "relevance_score": 0.0,
+          "avg_similarity_score": -6.861445426940918,
+          "found_content": [],
+          "missing_content": [
+            "Thursday"
+          ],
+          "retrieval_time": 0.1090691089630127,
+          "complexity": "simple",
+          "passed": false
+        },
+        {
+          "query": "Court phone number?",
+          "chunks_retrieved": 3,
+          "relevance_score": 1.0,
+          "avg_similarity_score": -2.3362367153167725,
+          "found_content": [
+            "court",
+            "contact"
+          ],
+          "missing_content": [],
+          "retrieval_time": 0.10864424705505371,
+          "complexity": "simple",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "category": "form_related",
+      "total_queries": 4,
+      "passed": 4,
+      "pass_rate": 100.0,
+      "avg_relevance": 1.0,
+      "avg_retrieval_time": 0.09358781576156616,
+      "details": [
+        {
+          "query": "What forms do I need for minor guardianship?",
+          "chunks_retrieved": 3,
+          "relevance_score": 1.0,
+          "avg_similarity_score": 3.694499969482422,
+          "found_content": [
+            "PC 651",
+            "PC 652",
+            "forms"
+          ],
+          "missing_content": [],
+          "retrieval_time": 0.07516098022460938,
+          "complexity": "simple",
+          "passed": true
+        },
+        {
+          "query": "Where can I get form PC 651?",
+          "chunks_retrieved": 3,
+          "relevance_score": 1.0,
+          "avg_similarity_score": -4.014610767364502,
+          "found_content": [
+            "PC 651",
+            "form",
+            "petition"
+          ],
+          "missing_content": [],
+          "retrieval_time": 0.11269998550415039,
+          "complexity": "simple",
+          "passed": true
+        },
+        {
+          "query": "Do I need form MC 20?",
+          "chunks_retrieved": 3,
+          "relevance_score": 1.0,
+          "avg_similarity_score": -3.367717742919922,
+          "found_content": [
+            "MC 20",
+            "fee waiver"
+          ],
+          "missing_content": [],
+          "retrieval_time": 0.1099252700805664,
+          "complexity": "simple",
+          "passed": true
+        },
+        {
+          "query": "List all required forms",
+          "chunks_retrieved": 3,
+          "relevance_score": 1.0,
+          "avg_similarity_score": -4.33866548538208,
+          "found_content": [
+            "forms",
+            "required",
+            "PC"
+          ],
+          "missing_content": [],
+          "retrieval_time": 0.07656502723693848,
+          "complexity": "simple",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "category": "procedural",
+      "total_queries": 4,
+      "passed": 2,
+      "pass_rate": 50.0,
+      "avg_relevance": 0.8333333333333333,
+      "avg_retrieval_time": 0.24675124883651733,
+      "details": [
+        {
+          "query": "How do I notify parents about the hearing?",
+          "chunks_retrieved": 5,
+          "relevance_score": 1.0,
+          "avg_similarity_score": -1.0994138518969219,
+          "found_content": [
+            "notify",
+            "parents",
+            "14 days"
+          ],
+          "missing_content": [],
+          "retrieval_time": 0.2856130599975586,
+          "complexity": "standard",
+          "passed": true
+        },
+        {
+          "query": "What are the steps to file for guardianship?",
+          "chunks_retrieved": 5,
+          "relevance_score": 0.6666666666666666,
+          "avg_similarity_score": 3.798390547434489,
+          "found_content": [
+            "file",
+            "petition"
+          ],
+          "missing_content": [
+            "steps"
+          ],
+          "retrieval_time": 0.3151381015777588,
+          "complexity": "standard",
+          "passed": false
+        },
+        {
+          "query": "How long before the hearing must I serve notice?",
+          "chunks_retrieved": 5,
+          "relevance_score": 1.0,
+          "avg_similarity_score": 3.4509697755177817,
+          "found_content": [
+            "14 days",
+            "notice",
+            "hearing"
+          ],
+          "missing_content": [],
+          "retrieval_time": 0.29972004890441895,
+          "complexity": "standard",
+          "passed": true
+        },
+        {
+          "query": "Who must be notified?",
+          "chunks_retrieved": 3,
+          "relevance_score": 0.6666666666666666,
+          "avg_similarity_score": -5.428833961486816,
+          "found_content": [
+            "notify",
+            "parents"
+          ],
+          "missing_content": [
+            "interested parties"
+          ],
+          "retrieval_time": 0.08653378486633301,
+          "complexity": "simple",
+          "passed": false
+        }
+      ]
+    },
+    {
+      "category": "complex",
+      "total_queries": 4,
+      "passed": 3,
+      "pass_rate": 75.0,
+      "avg_relevance": 0.9375,
+      "avg_retrieval_time": 0.3935154676437378,
+      "details": [
+        {
+          "query": "How does ICWA apply to emergency guardianship when the child is a tribal member?",
+          "chunks_retrieved": 7,
+          "relevance_score": 0.75,
+          "avg_similarity_score": 1.2765879034996033,
+          "found_content": [
+            "ICWA",
+            "emergency",
+            "tribal"
+          ],
+          "missing_content": [
+            "notification"
+          ],
+          "retrieval_time": 0.4485659599304199,
+          "complexity": "complex",
+          "passed": false
+        },
+        {
+          "query": "What are the placement preferences under ICWA and how do they affect guardian selection?",
+          "chunks_retrieved": 7,
+          "relevance_score": 1.0,
+          "avg_similarity_score": -3.152695814768473,
+          "found_content": [
+            "ICWA",
+            "placement",
+            "preferences",
+            "Indian"
+          ],
+          "missing_content": [],
+          "retrieval_time": 0.38941001892089844,
+          "complexity": "complex",
+          "passed": true
+        },
+        {
+          "query": "If parents disagree about guardianship and one is tribal member, what special rules apply?",
+          "chunks_retrieved": 7,
+          "relevance_score": 1.0,
+          "avg_similarity_score": -0.16833957036336264,
+          "found_content": [
+            "tribal",
+            "ICWA",
+            "parent",
+            "consent"
+          ],
+          "missing_content": [],
+          "retrieval_time": 0.38959503173828125,
+          "complexity": "complex",
+          "passed": true
+        },
+        {
+          "query": "Can I get emergency guardianship if CPS is involved and ICWA applies?",
+          "chunks_retrieved": 7,
+          "relevance_score": 1.0,
+          "avg_similarity_score": -1.823334813117981,
+          "found_content": [
+            "emergency",
+            "ICWA",
+            "tribal"
+          ],
+          "missing_content": [],
+          "retrieval_time": 0.34649085998535156,
+          "complexity": "complex",
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "query_types": {
+    "formats": [
+      {
+        "format": "question",
+        "query": "What is the filing fee for guardianship?",
+        "chunks_retrieved": 3,
+        "found_relevant": true,
+        "complexity": "simple",
+        "top_score": 2.8836097717285156
+      },
+      {
+        "format": "keyword",
+        "query": "filing fee guardianship",
+        "chunks_retrieved": 3,
+        "found_relevant": true,
+        "complexity": "simple",
+        "top_score": 3.5428996086120605
+      },
+      {
+        "format": "statement",
+        "query": "I need to know the filing fee",
+        "chunks_retrieved": 3,
+        "found_relevant": true,
+        "complexity": "simple",
+        "top_score": -3.8370494842529297
+      },
+      {
+        "format": "command",
+        "query": "tell me the filing fee",
+        "chunks_retrieved": 3,
+        "found_relevant": true,
+        "complexity": "simple",
+        "top_score": -4.085261344909668
+      },
+      {
+        "format": "incomplete",
+        "query": "filing fee",
+        "chunks_retrieved": 3,
+        "found_relevant": true,
+        "complexity": "simple",
+        "top_score": -1.1908873319625854
+      },
+      {
+        "format": "conversational",
+        "query": "hey can you help me figure out how much it costs to file",
+        "chunks_retrieved": 3,
+        "found_relevant": true,
+        "complexity": "simple",
+        "top_score": -7.881271839141846
+      }
+    ],
+    "lengths": [
+      {
+        "length_type": "single_word",
+        "query_length": 12,
+        "chunks_retrieved": 5,
+        "retrieval_time": 0.3220663070678711,
+        "complexity": "standard"
+      },
+      {
+        "length_type": "short",
+        "query_length": 17,
+        "chunks_retrieved": 3,
+        "retrieval_time": 0.1310887336730957,
+        "complexity": "simple"
+      },
+      {
+        "length_type": "medium",
+        "query_length": 47,
+        "chunks_retrieved": 5,
+        "retrieval_time": 0.32332277297973633,
+        "complexity": "standard"
+      },
+      {
+        "length_type": "long",
+        "query_length": 141,
+        "chunks_retrieved": 5,
+        "retrieval_time": 0.3301241397857666,
+        "complexity": "standard"
+      },
+      {
+        "length_type": "very_long",
+        "query_length": 323,
+        "chunks_retrieved": 7,
+        "retrieval_time": 0.7965760231018066,
+        "complexity": "complex"
+      }
+    ]
+  },
+  "parameter_testing": {
+    "top_k": [
+      {
+        "top_k": 1,
+        "error": "'HybridRetriever' object has no attribute 'top_k'"
+      },
+      {
+        "top_k": 3,
+        "error": "'HybridRetriever' object has no attribute 'top_k'"
+      },
+      {
+        "top_k": 5,
+        "error": "'HybridRetriever' object has no attribute 'top_k'"
+      },
+      {
+        "top_k": 10,
+        "error": "'HybridRetriever' object has no attribute 'top_k'"
+      },
+      {
+        "top_k": 15,
+        "error": "'HybridRetriever' object has no attribute 'top_k'"
+      },
+      {
+        "top_k": 20,
+        "error": "'HybridRetriever' object has no attribute 'top_k'"
+      }
+    ],
+    "search_modes": {
+      "error": "'NoneType' object has no attribute 'get_scores'"
+    },
+    "complexity": [
+      {
+        "query": "filing fee?",
+        "expected_complexity": "simple",
+        "detected_complexity": "simple",
+        "chunks_retrieved": 3,
+        "params": {
+          "examples": [
+            "filing fee?",
+            "what form?",
+            "court address?"
+          ],
+          "top_k": 5,
+          "query_rewrites": 0,
+          "rerank_top_k": 3,
+          "latency_budget_ms": 800,
+          "latency_p95_ms": 1000
+        }
+      },
+      {
+        "query": "how to file for guardianship",
+        "expected_complexity": "standard",
+        "detected_complexity": "standard",
+        "chunks_retrieved": 5,
+        "params": {
+          "examples": [
+            "grandma guardianship",
+            "parent consent"
+          ],
+          "top_k": 10,
+          "query_rewrites": 3,
+          "rerank_top_k": 5,
+          "latency_budget_ms": 1500,
+          "latency_p95_ms": 1800
+        }
+      },
+      {
+        "query": "ICWA requirements for emergency guardianship when parents disagree",
+        "expected_complexity": "complex",
+        "detected_complexity": "complex",
+        "chunks_retrieved": 7,
+        "params": {
+          "examples": [
+            "ICWA applies",
+            "emergency + out of state"
+          ],
+          "top_k": 15,
+          "query_rewrites": 5,
+          "rerank_top_k": 7,
+          "latency_budget_ms": 2000,
+          "latency_p95_ms": 2500,
+          "fallback_if_slow": {
+            "top_k": 10,
+            "query_rewrites": 3
+          }
+        }
+      }
+    ]
+  },
+  "performance_metrics": {
+    "simple_factual": [
+      {
+        "query": "What is the filing fee for guardianship in Genesee...",
+        "complexity": "simple",
+        "latencies": [
+          105.25703430175781,
+          88.82808685302734,
+          90.03186225891113,
+          89.18285369873047,
+          89.02382850646973
+        ],
+        "avg_latency": 92.4647331237793,
+        "min_latency": 88.82808685302734,
+        "max_latency": 105.25703430175781,
+        "std_latency": 6.409330438006612,
+        "budget_ms": 300,
+        "met_budget": 
