@@ -113,10 +113,44 @@ michigan-guardianship-ai/
 
 ## Recent Improvements
 
+### Phase 3 Testing Framework (NEW)
+- Evaluate 11 LLMs (6 Google AI, 5 OpenRouter) against 200 synthetic questions
+- Two-phase approach: data generation → evaluation
+- Comprehensive scoring on 7 dimensions (procedural accuracy, legal accuracy, actionability, etc.)
+- Cost tracking and performance analysis
+- [See Phase 3 Testing Guide](docs/phase3_testing_guide.md)
+
+### Intelligent Agents (NEW)
+- **Test Results Analyzer**: Cross-run comparisons and qualitative insights
+- **Workflow Optimizer**: Fast feedback loops during development
+- **AI Integration Expert**: Prompt optimization based on failure analysis
+- [See Agents Documentation](scripts/agents/README.md)
+
+### Retrieval Improvements
 - Implemented semantic similarity checking (0.8 threshold) for test validation
 - Added keyword boosting (1.3-1.5x) for critical terms
 - Enhanced query expansion with legal term mappings
 - Improved test pass rate to 70% with mock tests and 60% with real LLM
+
+## Phase 3 Quick Start
+
+```bash
+# Setup Phase 3 environment
+make phase3-setup
+
+# Test connectivity
+make phase3-test
+
+# Run full evaluation (takes hours)
+make phase3-run
+
+# Analyze results
+make phase3-analyze RUN_ID=run_20250128_1430
+
+# Or use agents for advanced analysis
+python scripts/agents/test_results_analyzer.py --run_ids run_20250128_1430
+python scripts/agents/workflow_optimizer.py --golden-test
+```
 
 ## License
 

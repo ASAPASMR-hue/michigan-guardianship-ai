@@ -5,3 +5,14 @@ lettucedetect
 rank-bm25
 scikit-learn
 scipy
+openai>=1.0.0
+google-generativeai
+openpyxl
+python-dotenv
+matplotlib
+seaborn
+graphviz
+plotly
+jinja2
+schedule
+psutil

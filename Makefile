@@ -36,3 +36,21 @@ clean-all: clean-chroma
 	@echo "Cleaning all generated files..."
 	rm -rf logs/*.log results/*.csv __pycache__ scripts/__pycache__
 	@echo "Cleanup complete."
+
+# Phase 3 testing commands
+phase3-setup:
+	@echo "Setting up Phase 3 testing environment..."
+	./setup_phase3.sh
+
+phase3-test:
+	@echo "Testing Phase 3 setup..."
+	python scripts/test_phase3_setup.py
+
+phase3-run:
+	@echo "Running Phase 3 full evaluation..."
+	python scripts/run_full_evaluation.py
+
+phase3-analyze:
+	@echo "Analyzing Phase 3 results..."
+	@echo "Usage: make phase3-analyze RUN_ID=run_20250128_1430"
+	python scripts/analyze_results.py --run_id $(RUN_ID)
